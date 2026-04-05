@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     gap: 0;
     border-bottom: 1px solid var(--border);
     background: color-mix(in srgb, var(--background) 95%, white 5%);
@@ -39,9 +39,57 @@
 }
 
 .logoImage {
-    height: 125px !important;
+    height: 100px !important;
     width: auto !important;
     display: block;
+}
+
+.searchWrap {
+    position: relative;
+    width: 100%;
+    margin: 1.25rem 0 0.25rem;
+    padding: 0 1rem;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    z-index: 1;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.searchInput {
+    width: 100%;
+    height: 40px;
+    background: color-mix(in srgb, var(--primary) 5%, rgba(var(--background-rgb), 0.3));
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(143, 137, 76, 0.2);
+    border-radius: 12px;
+    padding: 0 1rem 0 2.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--foreground);
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.searchInput:focus {
+    border-color: var(--primary);
+    background: rgba(var(--background-rgb), 0.6);
+    box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.12);
+}
+
+/* Hide native browser search clear button */
+.searchInput::-webkit-search-decoration,
+.searchInput::-webkit-search-cancel-button,
+.searchInput::-webkit-search-results-button,
+.searchInput::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none !important;
 }
 
 .sidebarContainerMaximized {
