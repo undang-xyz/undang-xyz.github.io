@@ -1,0 +1,57 @@
+.sidebarContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: var(--ifm-navbar-background-color);
+    border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.sidebarHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--background) 95%, white 5%);
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.logoWrapper:hover {
+    transform: scale(1.05);
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+}
+
+.logoImage {
+    height: 420px !important;
+    width: auto !important;
+    display: block;
+}
+
+.sidebarContainerMaximized {
+    width: var(--ifm-sidebar-width);
+}
+
+/* Ensure the sidebar itself scrolls, not the header */
+.sidebarContainer>[class*='sidebar_'] {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 1rem !important;
+}

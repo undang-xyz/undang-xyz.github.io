@@ -31,13 +31,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -47,6 +41,7 @@ const config: Config = {
 
 
   themeConfig: {
+    backToTopButton: true,
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
@@ -62,32 +57,12 @@ const config: Config = {
           position: 'left',
           label: 'Dokumentasi',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
       ],
     },
     footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Introduction',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Undang XYZ. Built with Docusaurus.`,
+      style: 'light',
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()} Undang XYZ.`,
     },
 
     zoom: {
@@ -119,7 +94,7 @@ const config: Config = {
         hashed: true,
         language: ["en"],
         indexDocs: true,
-        indexBlog: true,
+        indexBlog: false,
         indexPages: true,
       },
     ],

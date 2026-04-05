@@ -1,7 +1,0 @@
-admin:
-  name: Admin
-  title: Undang.xyz Official
-  url: https://undang.xyz
-  image_url: /img/ava.png
-  page:
-    permalink: '/admin-articles'
