@@ -30,6 +30,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/', // Serve docs from the root
         },
         blog: false,
         theme: {
@@ -50,14 +51,7 @@ const config: Config = {
         src: 'img/logo.png',
         height: 48,
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Dokumentasi',
-        },
-      ],
+      items: [], // Removed 'Dokumentasi' link as it's now the homepage
     },
     footer: {
       style: 'light',

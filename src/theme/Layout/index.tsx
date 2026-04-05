@@ -56,7 +56,7 @@ function MobileBottomNav({ onHamburgerClick, isDrawerOpen }: MobileBottomNavProp
       </a>
 
       {/* Center: Read Docs button with icon */}
-      <a href="/docs" className="mobile-bottom-nav__button-center">
+      <a href="/" className="mobile-bottom-nav__button-center">
         <svg style={{ marginRight: '10px', opacity: 0.8 }} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
@@ -99,8 +99,7 @@ type Props = WrapperProps<typeof LayoutType>;
 
 export default function LayoutWrapper(props: Props & { children?: ReactNode }): ReactNode {
   const location = useLocation();
-  const isDocsPage = location.pathname.startsWith('/docs');
-  const isHomepage = location.pathname === '/';
+  const isDocsPage = location.pathname.startsWith('/') || location.pathname === '';
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const openDrawer = useCallback(() => setDrawerOpen(true), []);
@@ -113,23 +112,11 @@ export default function LayoutWrapper(props: Props & { children?: ReactNode }): 
   }, [location.pathname]);
 
   useEffect(() => {
-    if (isDocsPage) {
-      document.body.classList.add('docs-page');
-    } else {
-      document.body.classList.remove('docs-page');
-    }
-
-    if (isHomepage) {
-      document.body.classList.add('homepage-view');
-    } else {
-      document.body.classList.remove('homepage-view');
-    }
-
+    document.body.classList.add('docs-page');
     return () => {
       document.body.classList.remove('docs-page');
-      document.body.classList.remove('homepage-view');
     };
-  }, [isDocsPage, isHomepage]);
+  }, []);
 
   return (
     <SidebarProvider>
@@ -140,18 +127,6 @@ export default function LayoutWrapper(props: Props & { children?: ReactNode }): 
         {/* Mobile docs drawer (only renders when applicable) */}
         <MobileDocsDrawer isOpen={drawerOpen} onClose={closeDrawer} />
 
-        {isHomepage && (
-          <Head>
-            <style>{`
-              .navbar, .announcementBar { 
-                display: none !important; 
-                visibility: hidden !important;
-                height: 0 !important;
-                pointer-events: none !important;
-              }
-            `}</style>
-          </Head>
-        )}
         {props.children}
       </Layout>
     </SidebarProvider>
