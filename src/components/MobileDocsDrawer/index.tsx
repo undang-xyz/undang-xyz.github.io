@@ -110,69 +110,69 @@ export default function MobileDocsDrawer({ isOpen, onClose }: MobileDocsDrawerPr
 
             {/* Drawer panel */}
             <div className={drawerClass} role="dialog" aria-modal="true" aria-label="Navigasi dokumen">
-                {/* Header - Logo is centered via CSS absolute positioning */}
-                <div className="mobile-drawer__header">
-                    <a href="/" className="mobile-drawer__logo-link" onClick={handleLinkClick} aria-label="Kembali ke beranda">
-                        <img src="/img/logo.png" alt="Undang XYZ" className="mobile-drawer__logo" />
-                    </a>
-                    <button
-                        className="mobile-drawer__close"
-                        onClick={onClose}
-                        aria-label="Tutup menu"
-                    >
-                        Tutup
-                    </button>
-                </div>
+                <div className="mobile-drawer__glow" />
 
-                {/* Search / Command Bar */}
-                <div className="mobile-drawer__search-wrap">
-                    <svg className="mobile-drawer__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="11" cy="11" r="8" />
-                        <path d="m21 21-4.3-4.3" />
-                    </svg>
-                    <input
-                        type="search"
-                        className="mobile-drawer__search-input"
-                        placeholder="Cari panduan..."
-                        value={query}
-                        onChange={e => setQuery(e.target.value)}
-                        // eslint-disable-next-line jsx-a11y/no-autofocus
-                        autoFocus
-                        autoComplete="off"
-                        spellCheck={false}
-                    />
-                    {query && (
-                        <button
-                            className="mobile-drawer__search-clear"
-                            onClick={() => setQuery('')}
-                            aria-label="Hapus pencarian"
-                        >
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="18" y1="6" x2="6" y2="18" />
-                                <line x1="6" y1="6" x2="18" y2="18" />
-                            </svg>
-                        </button>
-                    )}
-                </div>
-
-                {/* Dashboard Grid */}
-                <nav className="mobile-drawer__list" aria-label="Daftar dokumen">
-                    {filtered.length === 0 ? (
-                        <div className="mobile-drawer__empty">Tidak ada menu ditemukan.</div>
-                    ) : (
-                        filtered.map((doc, i) => (
-                            <Link
-                                key={i}
-                                to={doc.href}
-                                className={`mobile-drawer__item mobile-drawer__item--level${doc.level}`}
-                                onClick={handleLinkClick}
-                                style={{ animationDelay: `${i * 0.04}s` }}
+                {/* Dashboard Grid & Header integration */}
+                <div className="mobile-drawer__scroll-container">
+                    {/* Search / Command Bar at Top of Scroll */}
+                    <div className="mobile-drawer__search-wrap">
+                        <svg className="mobile-drawer__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+                        </svg>
+                        <input
+                            type="search"
+                            className="mobile-drawer__search-input"
+                            placeholder="Cari panduan..."
+                            value={query}
+                            onChange={e => setQuery(e.target.value)}
+                            // eslint-disable-next-line jsx-a11y/no-autofocus
+                            autoFocus
+                            autoComplete="off"
+                            spellCheck={false}
+                        />
+                        {query && (
+                            <button
+                                className="mobile-drawer__search-clear"
+                                onClick={() => setQuery('')}
+                                aria-label="Hapus pencarian"
                             >
-                                <span className="mobile-drawer__item-label">{doc.label}</span>
-                            </Link>
-                        ))
-                    )}
-                </nav>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Dashboard Grid */}
+                    <nav className="mobile-drawer__list" aria-label="Daftar dokumen">
+                        {filtered.length === 0 ? (
+                            <div className="mobile-drawer__empty">Tidak ada menu ditemukan.</div>
+                        ) : (
+                            filtered.map((doc, i) => (
+                                <Link
+                                    key={i}
+                                    to={doc.href}
+                                    className={`mobile-drawer__item mobile-drawer__item--level${doc.level}`}
+                                    onClick={handleLinkClick}
+                                    style={{ animationDelay: `${(i + 2) * 0.05}s` }}
+                                >
+                                    <span className="mobile-drawer__item-label">{doc.label}</span>
+                                </Link>
+                            ))
+                        )}
+                    </nav>
+                </div>
+
+                {/* Close Button - Bottom Right Tab */}
+                <button
+                    className="mobile-drawer__close"
+                    onClick={onClose}
+                    aria-label="Tutup menu"
+                >
+                    Tutup
+                </button>
             </div>
         </>
     );
