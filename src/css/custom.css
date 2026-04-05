@@ -279,103 +279,136 @@ body.homepage-view .main-wrapper {
 /* Desktop-only theme toggle position */
 .theme-switcher-fixed {
   position: fixed;
-  top: 1.25rem;
-  right: 0;
-  /* Flush with right edge */
+  top: 0.75rem;
+  right: 0.7rem;
   z-index: 1000;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
   background: color-mix(in srgb, var(--background) 40%, transparent);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   border: 1.5px solid rgba(143, 137, 76, 0.25);
-  border-right: none;
-  border-radius: 18px 0 0 18px;
-  padding: 0.6rem 0.5rem 0.6rem 0.75rem;
-  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 50% !important;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .theme-switcher-fixed:hover {
   background: color-mix(in srgb, var(--background) 60%, transparent);
-  padding-right: 0.75rem;
-  /* Slight slide out effect */
+  transform: scale(1.05);
 }
 
-.theme-toggle-button {
-  background: transparent;
-  border: none;
-  color: var(--primary);
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  padding: 0;
-  outline: none;
-  opacity: 0.8;
+/* Bottom Right Cluster for Mobile Navigation */
+.mobile-controls-fixed {
+  display: none;
 }
 
 @media (max-width: 996px) {
-  .theme-toggle-button {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-  }
-}
-
-.theme-toggle-button:hover {
-  transform: scale(1.1);
-  background: rgba(var(--primary-rgb), 0.1);
-  opacity: 1;
-}
-
-.theme-toggle-button:active {
-  transform: scale(0.92);
-}
-
-@media (max-width: 996px) {
-  .theme-switcher-fixed {
-    top: auto;
+  .mobile-controls-fixed {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     bottom: 0;
     right: 0;
-    padding: 0.6rem 0.5rem 1rem 0.8rem;
-    /* Padding for corner alignment */
+    z-index: 1000;
     gap: 0.5rem;
+    background: color-mix(in srgb, var(--background) 40%, transparent);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1.5px solid rgba(143, 137, 76, 0.25);
+    border-right: none;
     border-radius: 12px 0 0 0;
-    /* Align with corner */
+    padding: 0.6rem 0.5rem 1rem 0.8rem;
     box-shadow: -6px -6px 20px rgba(0, 0, 0, 0.1);
   }
 }
 
+.mobile-home-button,
+.theme-toggle-button {
+  display: flex !important;
+  background: transparent !important;
+  border: none !important;
+  color: var(--primary) !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 12px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  padding: 0 !important;
+  outline: none !important;
+  opacity: 0.8 !important;
+  text-decoration: none !important;
+}
+
+.mobile-home-button {
+  display: none !important;
+}
+
+@media (max-width: 996px) {
+
+  .mobile-home-button,
+  .theme-toggle-button {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 10px !important;
+  }
+
+  .mobile-home-button {
+    display: flex !important;
+  }
+}
+
+.mobile-home-button:hover,
+.theme-toggle-button:hover {
+  transform: scale(1.1) !important;
+  background: rgba(var(--primary-rgb), 0.1) !important;
+  opacity: 1 !important;
+}
+
+.mobile-home-button:active,
+.theme-toggle-button:active {
+  transform: scale(0.92) !important;
+}
+
 .mobile-menu-toggler {
-  display: none;
-  background: transparent;
-  border: none;
-  color: var(--primary);
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  padding: 0;
-  outline: none;
-  opacity: 0.8;
+  display: none !important;
+  background: transparent !important;
+  border: none !important;
+  color: var(--primary) !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 12px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  padding: 0 !important;
+  outline: none !important;
+  opacity: 0.8 !important;
 }
 
 @media (max-width: 996px) {
   .mobile-menu-toggler {
-    display: flex;
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
+    display: flex !important;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 10px !important;
   }
+}
+
+.mobile-menu-toggler:hover {
+  transform: scale(1.1) !important;
+  background: rgba(var(--primary-rgb), 0.1) !important;
+  opacity: 1 !important;
+}
+
+.mobile-menu-toggler:active {
+  transform: scale(0.92) !important;
 }
 
 /* Reposition and Unify Back-to-Top button aesthetic on mobile */

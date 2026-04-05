@@ -50,6 +50,7 @@ const config: Config = {
         alt: 'Undang XYZ Logo',
         src: 'img/logo.png',
         height: 48,
+        href: 'https://undang.xyz',
       },
       items: [], // Removed 'Dokumentasi' link as it's now the homepage
     },

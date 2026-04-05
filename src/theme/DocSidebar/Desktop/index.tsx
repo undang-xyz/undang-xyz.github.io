@@ -58,7 +58,7 @@ export default function DocSidebarDesktopWrapper(props: Props): ReactNode {
         <div className={styles.sidebarContainer}>
             {/* Logo Header */}
             <div className={styles.sidebarHeader}>
-                <a href="/" className={styles.logoLink} aria-label="Undang XYZ Home">
+                <a href="https://undang.xyz" className={styles.logoLink} aria-label="Undang XYZ Home">
                     <img
                         src="/img/logo.png"
                         alt="Undang XYZ"

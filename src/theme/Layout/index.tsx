@@ -5,7 +5,7 @@ import type { WrapperProps } from '@docusaurus/types';
 import { useLocation } from '@docusaurus/router';
 import Head from '@docusaurus/Head';
 import { useColorMode } from '@docusaurus/theme-common';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { FaSun, FaMoon, FaHome } from 'react-icons/fa';
 import MobileDocsDrawer from '@site/src/components/MobileDocsDrawer';
 import { SidebarProvider } from '@site/src/theme/SidebarContext';
 
@@ -14,29 +14,44 @@ import { SidebarProvider } from '@site/src/theme/SidebarContext';
 function ThemeSwitcher({ onMenuClick, isDocsPage }: { onMenuClick: () => void; isDocsPage: boolean }) {
   const { colorMode, setColorMode } = useColorMode();
   return (
-    <div className="theme-switcher-fixed">
-      <button
-        onClick={() => setColorMode(colorMode === 'dark' ? 'light' : 'dark')}
-        className="theme-toggle-button"
-        title="Toggle Theme"
-      >
-        {colorMode === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}
-      </button>
+    <>
+      {/* Top Right Cluster: Theme Switcher */}
+      <div className="theme-switcher-fixed">
+        <button
+          onClick={() => setColorMode(colorMode === 'dark' ? 'light' : 'dark')}
+          className="theme-toggle-button"
+          title="Toggle Theme"
+        >
+          {colorMode === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}
+        </button>
+      </div>
 
-      {/* Menu toggler only visible on mobile via CSS */}
-      <button
-        onClick={onMenuClick}
-        className="mobile-menu-toggler"
-        title="Toggle Menu"
-        aria-label="Toggle Menu"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="4" y1="6" x2="20" y2="6" />
-          <line x1="4" y1="12" x2="20" y2="12" />
-          <line x1="4" y1="18" x2="20" y2="18" />
-        </svg>
-      </button>
-    </div>
+      {/* Bottom Right Cluster: Mobile Navigation (Home & Menu) */}
+      <div className="mobile-controls-fixed">
+        <a
+          href="https://undang.xyz"
+          className="mobile-home-button"
+          title="Beranda"
+          aria-label="Beranda"
+        >
+          <FaHome size={20} />
+        </a>
+
+        {/* Menu toggler only visible on mobile via CSS */}
+        <button
+          onClick={onMenuClick}
+          className="mobile-menu-toggler"
+          title="Toggle Menu"
+          aria-label="Toggle Menu"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </>
   );
 }
 
@@ -51,7 +66,7 @@ function MobileBottomNav({ onHamburgerClick, isDrawerOpen }: MobileBottomNavProp
   return (
     <nav className="mobile-bottom-nav" aria-label="Navigasi utama">
       {/* Left: Logo */}
-      <a href="/" className="mobile-bottom-nav__logo-link" aria-label="Beranda">
+      <a href="https://undang.xyz" className="mobile-bottom-nav__logo-link" aria-label="Beranda">
         <img src="/img/logo.png" alt="Undang XYZ" className="mobile-bottom-nav__logo" />
       </a>
 
