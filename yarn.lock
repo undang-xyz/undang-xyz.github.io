@@ -6454,6 +6454,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lucide-react@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.npmjs.org/lucide-react/-/lucide-react-1.7.0.tgz"
+  integrity sha512-yI7BeItCLZJTXikmK4KNUGCKoGzSvbKlfCvw44bU4fXAL6v3gYS4uHD1jzsLkfwODYwI6Drw5Tu9Z5ulDe0TSg==
+
 lunr-languages@^1.14.0, lunr-languages@^1.4.0:
   version "1.14.0"
   resolved "https://registry.npmjs.org/lunr-languages/-/lunr-languages-1.14.0.tgz"
@@ -8568,7 +8573,7 @@ react-router@^5.3.4, react-router@>=5, react-router@5.3.4:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react@*, "react@^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.14.0 || ^17 || ^18 || ^19", "react@^16.6.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^18 || ^19 || ^19.0.0-rc", "react@^18.0.0 || ^19.0.0", react@^19.0.0, react@^19.2.0, "react@>= 16.8.0 < 20.0.0", react@>=15, react@>=16, react@>=16.0.0:
+react@*, "react@^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.14.0 || ^17 || ^18 || ^19", "react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.6.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^18 || ^19 || ^19.0.0-rc", "react@^18.0.0 || ^19.0.0", react@^19.0.0, react@^19.2.0, "react@>= 16.8.0 < 20.0.0", react@>=15, react@>=16, react@>=16.0.0:
   version "19.2.0"
   resolved "https://registry.npmjs.org/react/-/react-19.2.0.tgz"
   integrity sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==
