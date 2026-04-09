@@ -47,8 +47,7 @@ Ikuti langkah-langkah di bawah ini untuk menghapus undangan yang sudah tidak And
     ### Langkah 3: Konfirmasi Akhir
     Setelah status menjadi draft, Anda dapat menyelesaikan proses penghapusan.
 
-    - **Hapus Kembali**: Klik ikon hapus sekali lagi.
-    - **Konfirmasi**: Setujui jendela konfirmasi yang muncul untuk menghapus data secara permanen.
+    - **Konfirmasi**: Klik tombol **"Hapus Permanen"** pada jendela konfirmasi yang muncul untuk menghapus data secara permanen.
 
     ![Konfirmasi Hapus Undangan](/img/hapus-undangan/hapus-undangan.jpg)
 

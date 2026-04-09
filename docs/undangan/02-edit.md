@@ -64,8 +64,10 @@ Ikuti langkah-langkah di bawah ini untuk mengubah informasi pada undangan yang s
 
     - **Klik Simpan**: Tekan tombol simpan untuk mengaplikasikan semua perubahan.
 
-    :::danger Perhatian
-    Dengan mengedit undangan, perubahan akan langsung terlihat oleh tamu yang mengakses link undangan setelah Anda menyimpannya.
+    :::info Perhatian
+    Visibilitas perubahan bergantung pada status undangan Anda:
+    - **Published**: Perubahan akan langsung terlihat oleh tamu yang mengakses link undangan setelah Anda menyimpannya.
+    - **Draft**: Undangan hanya dapat diakses oleh Anda (pengguna), sehingga perubahan tidak akan terlihat oleh publik/tamu sampai status diubah menjadi Published.
     :::
 
     <WizardNavigation back="pengaturan" />
