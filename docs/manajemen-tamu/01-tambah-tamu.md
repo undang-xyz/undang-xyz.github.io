@@ -31,7 +31,7 @@ Ikuti panduan di bawah ini untuk menambahkan tamu ke daftar undangan Anda.
     - **WhatsApp**: Gunakan format nomor yang benar (misal: 62812...).
     - **Kategori**: Pilih label seperti VIP, Teman, atau Keluarga.
 
-    ![Form Tambah Tamu](/img/manajemen-tamu/form-tambah-tamu-correct.jpg)
+    ![Form Tambah Tamu](/img/manajemen-tamu/form-tambah-tamu-final.jpg)
 
     - **Simpan**: Klik **"Buat Entri Tamu"** untuk menyelesaikan.
 
