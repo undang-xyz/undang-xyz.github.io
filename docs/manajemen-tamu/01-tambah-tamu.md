@@ -11,14 +11,14 @@ import WizardNavigation from '@site/src/components/WizardNavigation';
 Ikuti panduan di bawah ini untuk menambahkan tamu ke daftar undangan Anda.
 
 <Tabs groupId="tambah-tamu-wizard" queryString="step" defaultValue="opsi">
-  <TabItem value="opsi" label="Opsi Tambah">
-    ### Opsi Tambah
+  <TabItem value="opsi" label="Klik Tambah Tamu">
+    ### Klik Tambah Tamu
     Di dashboard Manajemen Tamu, Anda bisa memilih cara untuk menambahkan tamu.
 
     - **Tambah Manual**: Klik tombol **"+ Tambah Tamu"** untuk membuka form.
     - **Metode**: Anda bisa menambah satu per satu atau impor sekaligus (massal).
 
-    ![Tombol Tambah Tamu](/img/manajemen-tamu/form-tambah-tamu-correct.jpg)
+    ![Tombol Tambah Tamu](/img/manajemen-tamu/klik-tambah-tamu.jpg)
 
     <WizardNavigation next="isi-data" nextLabel="Isi Data Tamu" />
   </TabItem>
@@ -30,6 +30,8 @@ Ikuti panduan di bawah ini untuk menambahkan tamu ke daftar undangan Anda.
     - **Nama Lengkap**: Masukkan nama tamu (misal: Budi Santoso).
     - **WhatsApp**: Gunakan format nomor yang benar (misal: 62812...).
     - **Kategori**: Pilih label seperti VIP, Teman, atau Keluarga.
+
+    ![Form Tambah Tamu](/img/manajemen-tamu/form-tambah-tamu-correct.jpg)
 
     - **Simpan**: Klik **"Buat Entri Tamu"** untuk menyelesaikan.
 
