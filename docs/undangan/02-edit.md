@@ -25,7 +25,7 @@ Ikuti langkah-langkah di bawah ini untuk mengubah informasi pada undangan yang s
   </TabItem>
 
   <TabItem value="edit-konten" label="2. Edit Undangan">
-    ### Langkah 2: Edit Undangan (Langsung di Tampilan)
+    ### Langkah 2: Edit Undangan (WYSIWYG - Langsung di Tampilan)
     Anda dapat mengedit halaman undangan secara langsung menggunakan fitur **WYSIWYG** (*What You See Is What You Get*). 
     
     Artinya, **apa yang Anda lihat di layar adalah hasil yang akan didapat**. Anda bisa langsung mengubah teks atau gambar tepat di posisinya, semudah mengedit dokumen atau presentasi.
