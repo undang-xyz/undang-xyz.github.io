@@ -6,7 +6,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import WizardNavigation from '@site/src/components/WizardNavigation';
 
-# Menambah Tamu
+# Tambah Tamu
 
 Ikuti panduan di bawah ini untuk menambahkan tamu ke daftar undangan Anda.
 
