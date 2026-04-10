@@ -51,6 +51,7 @@ const config: Config = {
         src: 'img/logo.png',
         height: 48,
         href: 'https://undang.xyz',
+        target: '_self',
       },
       items: [], // Removed 'Dokumentasi' link as it's now the homepage
     },

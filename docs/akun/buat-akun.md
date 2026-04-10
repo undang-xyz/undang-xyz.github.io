@@ -7,7 +7,7 @@ sidebar_position: 2
 Mendaftar di Undang.xyz sangat mudah dan cepat. Anda tidak perlu memasukkan kata sandi saat mendaftar.
 
 ### Daftar dengan Email
-1. Kunjungi halaman [Pendaftaran](https://undang.xyz/register).
+1. Kunjungi halaman <a href="https://undang.xyz/register" target="_self">Pendaftaran</a>.
 2. Masukkan **Nama Lengkap** (opsional) dan **Alamat Email** Anda.
 3. Klik tombol **"Send Setup Link"**.
 4. Sistem akan mengirimkan tautan aman ke email Anda untuk mengatur kata sandi dan mengaktifkan akun.

@@ -123,7 +123,7 @@ export default function MobileDocsDrawer({ isOpen, onClose }: MobileDocsDrawerPr
                         <input
                             type="search"
                             className="mobile-drawer__search-input"
-                            placeholder="Cari panduan..."
+                            placeholder="Cari panduan"
                             value={query}
                             onChange={e => setQuery(e.target.value)}
                             // eslint-disable-next-line jsx-a11y/no-autofocus

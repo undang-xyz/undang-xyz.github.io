@@ -59,6 +59,7 @@ export function PublicMobileNav({
                     <div className="public-mobile-bottom-bar__section">
                         <Link
                             to="https://undang.xyz"
+                            target="_self"
                             className={clsx(
                                 "public-mobile-bottom-bar__link",
                                 isHome ? "active" : "inactive"
@@ -94,6 +95,7 @@ export function PublicMobileNav({
                         <div className="public-mobile-bottom-bar__login-wrapper">
                             <Link
                                 to="https://undang.xyz/login"
+                                target="_self"
                                 className="public-mobile-bottom-bar__icon-link"
                             >
                                 <LogIn size={24} strokeWidth={2} />
@@ -152,6 +154,7 @@ export function PublicMobileNav({
                         <div className="public-mobile-more-overlay__grid">
                             <Link
                                 to="https://undang.xyz"
+                                target="_self"
                                 onClick={() => setIsMoreOpen(false)}
                                 className="public-mobile-more-overlay__grid-item"
                             >
@@ -161,6 +164,7 @@ export function PublicMobileNav({
 
                             <Link
                                 to="https://undang.xyz/pricing"
+                                target="_self"
                                 onClick={() => setIsMoreOpen(false)}
                                 className="public-mobile-more-overlay__grid-item"
                             >
@@ -182,6 +186,7 @@ export function PublicMobileNav({
 
                             <Link
                                 to="https://undang.xyz/templates"
+                                target="_self"
                                 onClick={() => setIsMoreOpen(false)}
                                 className="public-mobile-more-overlay__grid-item"
                             >
@@ -191,6 +196,7 @@ export function PublicMobileNav({
 
                             <Link
                                 to="https://undang.xyz/login"
+                                target="_self"
                                 onClick={() => setIsMoreOpen(false)}
                                 className="public-mobile-more-overlay__grid-item"
                             >
@@ -200,6 +206,7 @@ export function PublicMobileNav({
 
                             <Link
                                 to="https://undang.xyz/register"
+                                target="_self"
                                 onClick={() => setIsMoreOpen(false)}
                                 className="public-mobile-more-overlay__grid-item"
                             >
@@ -209,6 +216,7 @@ export function PublicMobileNav({
 
                             <Link
                                 to="https://undang.xyz/forgot-password"
+                                target="_self"
                                 onClick={() => setIsMoreOpen(false)}
                                 className="public-mobile-more-overlay__grid-item"
                             >
